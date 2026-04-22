@@ -1,5 +1,4 @@
 #include "Fixed.hpp"
-#include <cmath>
 
 const int Fixed::_fractionalBits = 8;
 
@@ -48,4 +47,9 @@ int Fixed::getRawBits(void) const {
 
 void Fixed::setRawBits(int const raw) {
     this->_val = raw;
+}
+
+std::ostream &operator<<(std::ostream &o, Fixed const &i) {
+    o << i.toFloat();
+    return o;
 }

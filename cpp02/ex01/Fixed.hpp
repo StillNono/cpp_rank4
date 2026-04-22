@@ -24,7 +24,9 @@ public:
 
     int getRawBits(void) const;
     void setRawBits(int const raw);
+
 };
 
+std::ostream &operator<<(std::ostream &o, Fixed const &i);
 
 #endif
